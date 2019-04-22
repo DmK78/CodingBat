@@ -4,22 +4,18 @@ public class Task {
     public static void main(String[] args) {
 
 
-        System.out.println(doubleX("aaaax"));
+        System.out.println(stringBits("Heeololeo"));
 
 
     }
 
-    static boolean doubleX(String str) {
-        int i = str.indexOf("x");
+    static public String stringBits(String str) {
+        String result = "";
+        for (int i = 0; i < (str.length()); i = i + 2) {
+            result = result + str.substring(i, i + 1);
 
-        if (i >= str.length()-1) {
-            return false;
         }
-
-        if (str.substring(i + 1, i + 2).contains("x")) return true;
-        else return false;
-
-
+        return result;
     }
 
 
