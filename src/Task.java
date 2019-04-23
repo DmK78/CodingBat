@@ -4,15 +4,14 @@ public class Task {
     public static void main(String[] args) {
 
 
-        int numbers[] = {2, 7, 4};
-        System.out.println(extraEnd("Hello"));
+
+        System.out.println(firstHalf("Hello"));
 
 
     }
 
-    static public String firstTwo(String str) {
-        if (str.length()<=2) return str;
-        return str.substring(0,2);
+    static public String firstHalf(String str) {
+        return str.substring(0,str.length()/2);
 
 
     }
