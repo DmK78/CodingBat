@@ -4,16 +4,15 @@ public class Task {
     public static void main(String[] args) {
 
 
-        System.out.println(firstHalf("Hello"));
+        System.out.println(twoChar("java", 3));
 
 
     }
 
-    static public String comboString(String a, String b) {
-        if (a.length() > b.length()) {
-            return b + a + b;
-        } else return a + b + a;
-
+    static public String twoChar(String str, int index) {
+        if(str.length()-(index)>=2 && index>0){
+            return str.substring(index,index+2);
+        }else return str.substring(0,2);
 
     }
 }
