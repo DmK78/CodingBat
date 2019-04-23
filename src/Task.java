@@ -5,13 +5,13 @@ public class Task {
 
 
         int numbers[] = {2, 7, 4};
-        System.out.println(noTriples(numbers));
+        System.out.println(makeOutWord("<<>>", "Yay"));
 
 
     }
 
-    static public String makeTags(String tag, String word) {
+    static public String makeOutWord(String out, String word) {
 
-        return "<" + tag + ">" + word + "</" + tag + ">";
+        return out.substring(0,2)+word+out.substring(2,4);
     }
 }
