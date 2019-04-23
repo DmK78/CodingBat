@@ -4,23 +4,20 @@ public class Task {
     public static void main(String[] args) {
 
 
-        int numbers[] = {1, 2};
-        System.out.println(array123(numbers));
+        System.out.println(stringMatch("xxcaazz", "xxbaaz"));
 
 
     }
 
-    static public boolean array123(int[] nums) {
-
-        for (int i = 0; i < nums.length; i++) {
-            if (nums[i] == 1) {
-                if (i < nums.length-2 && nums[i + 1] == 2) {
-                    if (nums[i + 2] == 3) {
-                        return true;
-                    }
-                }
+    static public int stringMatch(String a, String b) {
+        int count = 0;
+        for (int i = 0; i <= a.length() - 2; i++) {
+            //System.out.println("a " + i + " " + a.substring(i, i + 2));
+            if (i <= b.length() - 2 && a.substring(i, i + 2).equals(b.substring(i, i + 2))) {
+                count++;
             }
         }
-        return false;
+        return count;
+
     }
 }
