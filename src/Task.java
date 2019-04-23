@@ -4,13 +4,15 @@ public class Task {
     public static void main(String[] args) {
 
 
-        System.out.println(middleThree("dsdasdasdsadsad"));
+        System.out.println(hasBad("badxx"));
 
 
     }
 
-    static public String middleThree(String str) {
-        return str.substring(str.length()/2-1,str.length()/2+2);
+    static public boolean hasBad(String str) {
+                if(str.indexOf("bad")==0 && str.indexOf("bad")==1){
+            return true;
+        }else return false;
 
     }
 }
