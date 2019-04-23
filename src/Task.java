@@ -4,15 +4,21 @@ public class Task {
     public static void main(String[] args) {
 
 
-        System.out.println(stringYak("yak123ya"));
+        int numbers[] = {6, 6, 2, 6,6};
+        System.out.println(array667(numbers));
 
 
     }
 
-    static public String stringYak(String str) {
-       while (str.indexOf("yak")!=-1){
-           str=str.substring(0,str.indexOf("yak"))+str.substring(str.indexOf("yak")+3,str.length());
-       }
-       return str;
+    static public int array667(int[] nums) {
+        int count = 0;
+        for (int i = 0; i < nums.length - 1; i++) {
+            if (nums[i] == 6) {
+                if (nums[i + 1] == 6 || nums[i + 1] == 7) {
+                    count++;
+                }
+            }
+        }
+        return count;
     }
 }
