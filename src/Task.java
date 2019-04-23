@@ -4,22 +4,25 @@ public class Task {
     public static void main(String[] args) {
 
 
-        System.out.println(stringX("xxHxix"));
+        System.out.println(altPairs("CodingHorror"));
 
 
     }
 
-    static public String stringX(String str) {
-        if (str.length()<3)return str;
-        String result = str.substring(0, 1);
-        for (int i = 1; i < str.length() - 1; i++) {
+    static public String altPairs(String str) {
+        String result = "";
+        for (int i = 0; i < str.length() ; i = i + 4) {
+            //System.out.println(i);
 
-            if (!str.substring(i, i + 1).contains("x")) {
+            if (i<=str.length()-1){
                 result = result + str.substring(i, i + 1);
             }
+            if (i<=str.length()-2){
+                result = result + str.substring(i+1, i + 2);
+            }
+            //System.out.println(result);
 
         }
-        result = result + str.substring(str.length() - 1, str.length());
         return result;
     }
 }
