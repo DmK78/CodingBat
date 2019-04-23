@@ -9,10 +9,15 @@ public class Task {
 
     }
 
-    static public boolean hasBad(String str) {
-                if(str.indexOf("bad")==0 && str.indexOf("bad")==1){
-            return true;
-        }else return false;
+    static public String atFirst(String str) {
+        switch (str.length()) {
+            case 0:
+                return "@@";
+            case 1:
+                return str + "@";
+            default:
+                return str.substring(0, 2);
 
+        }
     }
 }
