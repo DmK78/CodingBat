@@ -10,8 +10,8 @@ public class Task {
 
     }
 
-    static public String makeAbba(String a, String b) {
+    static public String makeTags(String tag, String word) {
 
-        return a + b + b + a;
+        return "<" + tag + ">" + word + "</" + tag + ">";
     }
 }
