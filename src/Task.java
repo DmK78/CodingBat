@@ -4,21 +4,19 @@ public class Task {
     public static void main(String[] args) {
 
 
-        int numbers[] = {6, 6, 2, 6,6};
-        System.out.println(array667(numbers));
+        int numbers[] = {6, 6, 2, 6,6,5,4,1,1,1};
+        System.out.println(noTriples(numbers));
 
 
     }
 
-    static public int array667(int[] nums) {
-        int count = 0;
-        for (int i = 0; i < nums.length - 1; i++) {
-            if (nums[i] == 6) {
-                if (nums[i + 1] == 6 || nums[i + 1] == 7) {
-                    count++;
-                }
-            }
-        }
-        return count;
+    static public boolean noTriples(int[] nums) {
+     for (int i=0;i<nums.length-2;i++){
+         int num1=nums[i];
+         if (nums[i+1]==num1 && nums[i+2]==num1){
+             return false;
+         }
+     }
+     return true;
     }
 }
