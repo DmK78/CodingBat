@@ -5,13 +5,17 @@ public class Task {
 
 
         int numbers[] = {2, 7, 4};
-        System.out.println(makeOutWord("<<>>", "Yay"));
+        System.out.println(extraEnd("Hello"));
 
 
     }
 
-    static public String makeOutWord(String out, String word) {
+    static public String extraEnd(String str) {
 
-        return out.substring(0,2)+word+out.substring(2,4);
+        String result = "";
+        for (int i = 0; i < 3; i++) {
+            result = result + str.substring(str.length() - 2, str.length());
+        }
+        return result;
     }
 }
