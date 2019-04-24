@@ -13,15 +13,24 @@ public class Task {
 
     }
 
-    static public int luckySum(int a, int b, int c) {
-        int array[] = {a, b, c};
-        int sum = 0;
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] == 13) break;
-            sum += array[i];
-        }
+    static public int noTeenSum(int a, int b, int c) {
+        return fixTeen(a) + fixTeen(b) + fixTeen(c);
 
-        return sum;
+
+    }
+
+    static public int fixTeen(int n) {
+        switch (n) {
+            case 13:
+            case 14:
+            case 17:
+            case 18:
+            case 19: {
+                return 0;
+            }
+
+        }
+        return n;
 
     }
 }
