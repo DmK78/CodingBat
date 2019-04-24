@@ -13,25 +13,25 @@ public class Task {
 
     }
 
-    static public int[] front11(int[] a, int[] b) {
-        if (a.length == 0 && b.length > 0) {
-            int arr[] = {b[0]};
-            return arr;
+    static public int loneSum(int a, int b, int c) {
+        int sumA, sumB, sumC;
+        sumA = a;
+        sumB = b;
+        sumC = c;
+        if (a == b) {
+            sumA = 0;
+            sumB = 0;
         }
-        if (b.length == 0 && a.length > 0) {
-            int arr[] = {a[0]};
-            return arr;
+        if (a == c) {
+            sumA = 0;
+            sumC = 0;
         }
-        if(a.length>0 && b.length>0) {
-            int arr[] = {a[0], b[0]};
-            return arr;
+        if (b == c) {
+            sumB = 0;
+            sumC = 0;
         }
-        if (b.length == 0 && a.length == 0) {
-            int arr[] = new int[0];
-            return arr;
-        }
+        return sumA + sumB + sumC;
 
-return null;
 
     }
 }
