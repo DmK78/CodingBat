@@ -4,36 +4,30 @@ public class Task {
     public static void main(String[] args) {
 
 
-        System.out.println(startWord("hip", "zig"));
+        System.out.println(withoutX("x"));
 
 
     }
 
-    static public String startWord(String str, String word) {
-        int count = 1;
-        if (str.length() == 0 || word.length() == 0) return "";
-        if (word.length() > 1 && str.length() > 1) {
-            if (word.substring(1, 2).equals(str.substring(1, 2))) {
-                boolean isMatch = true;
-                while (isMatch) {
-                    if (word.substring(count, count + 1).equals(str.substring(count, count + 1))) {
-                        count++;
-                        if (count >= word.length()) break;
+    static public String withoutX(String str) {
 
-                    } else isMatch = false;
+        if (str.length()<2){
+            if (str==""){
+                return str;
+            }else if (str.equals("x")){
+                return "";
+            }
+        }
 
-                }
-                return str.substring(0, count);
-            }else return "";
+
+        if (str.substring(0, 1).contains("x")) {
+            str = str.substring(1, str.length());
 
         }
-        if (str.length()==1 && word.length()==1) return str;
-        if (word.length()==1 ) return str.substring(0,1);
-
-
-
-
-        return "";
+        if (str.substring(str.length() - 1, str.length()).contains("x")) {
+            str = str.substring(0, str.length() - 1);
+        }
+        return str;
 
 
     }
