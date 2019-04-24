@@ -9,12 +9,11 @@ public class Task {
 
     }
 
-    static public int[] fix23(int[] nums) {
-        for(int i=0;i<nums.length-1;i++){
-            if(nums[i]==2 && nums[i+1]==3){
-                nums[i+1]=0;
-            }
-        }
-        return nums;
+    static public int start1(int[] a, int[] b) {
+        int count=0;
+        if(a.length>0 && a[0]==1) count++;
+        if(b.length>0 && b[0]==1) count++;
+        return count;
+
     }
 }
