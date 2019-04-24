@@ -13,25 +13,15 @@ public class Task {
 
     }
 
-    static public int loneSum(int a, int b, int c) {
-        int sumA, sumB, sumC;
-        sumA = a;
-        sumB = b;
-        sumC = c;
-        if (a == b) {
-            sumA = 0;
-            sumB = 0;
+    static public int luckySum(int a, int b, int c) {
+        int array[] = {a, b, c};
+        int sum = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == 13) break;
+            sum += array[i];
         }
-        if (a == c) {
-            sumA = 0;
-            sumC = 0;
-        }
-        if (b == c) {
-            sumB = 0;
-            sumC = 0;
-        }
-        return sumA + sumB + sumC;
 
+        return sum;
 
     }
 }
