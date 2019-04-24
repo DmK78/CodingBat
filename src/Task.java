@@ -9,13 +9,13 @@ public class Task {
 
     }
 
-    static public boolean has23(int[] nums) {
+    static public boolean no23(int[] nums) {
         for(int i:nums){
             if (i==2 || i==3){
-                return true;
+                return false;
             }
         }
-      return false;
+      return true;
 
 
     }
