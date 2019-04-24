@@ -9,15 +9,12 @@ public class Task {
 
     }
 
-    static public boolean double23(int[] nums) {
-        int two = 0;
-        int three = 0;
-        for (int i : nums) {
-            if (i == 2) two++;
-            if (i == 3) three++;
+    static public int[] fix23(int[] nums) {
+        for(int i=0;i<nums.length-1;i++){
+            if(nums[i]==2 && nums[i+1]==3){
+                nums[i+1]=0;
+            }
         }
-        if (two == 2) return true;
-        if (three == 2) return true;
-        return false;
+        return nums;
     }
 }
