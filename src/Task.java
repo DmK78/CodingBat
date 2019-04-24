@@ -9,12 +9,13 @@ public class Task {
 
     }
 
-    static public int[] plusTwo(int[] a, int[] b) {
-        int arr[] = new int[a.length + b.length];
-        for (int i=0;i<a.length;i++){
-            arr[i]=a[i];
-            arr[i+a.length]=b[i];
-        }
-        return arr;
+    static public int[] swapEnds(int[] nums) {
+        int arr[] = new int[nums.length];
+        int tmp = 0;
+        tmp = nums[0];
+        nums[0] = nums[nums.length - 1];
+        nums[nums.length - 1] = tmp;
+        return nums;
+
     }
 }
