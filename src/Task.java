@@ -9,11 +9,13 @@ public class Task {
 
     }
 
-    static public int[] makeEnds(int[] nums) {
-        int arr[]=new int[2];
-        arr[0]=nums[0];
-        arr[1]=nums[nums.length-1];
-        return arr;
+    static public boolean has23(int[] nums) {
+        for(int i:nums){
+            if (i==2 || i==3){
+                return true;
+            }
+        }
+      return false;
 
 
     }
