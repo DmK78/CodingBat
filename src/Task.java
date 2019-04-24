@@ -9,10 +9,12 @@ public class Task {
 
     }
 
-    static public int[] makeMiddle(int[] nums) {
-        int[] arr = new int[2];
-        arr[0] = nums[nums.length / 2 - 1];
-        arr[1] = nums[nums.length / 2];
+    static public int[] plusTwo(int[] a, int[] b) {
+        int arr[] = new int[a.length + b.length];
+        for (int i=0;i<a.length;i++){
+            arr[i]=a[i];
+            arr[i+a.length]=b[i];
+        }
         return arr;
     }
 }
