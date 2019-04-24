@@ -4,17 +4,20 @@ public class Task {
     public static void main(String[] args) {
 
         int number[] = {1, 2, 3};
-        System.out.println(reverse3(number));
+        System.out.println(maxEnd3(number));
 
 
     }
 
-    static public int[] reverse3(int[] nums) {
-        int reverse[] = new int[nums.length];
-        for (int i = 0; i < nums.length ; i++) {
-            reverse[reverse.length - i-1] = nums[i];
-        }
+    static public int[] maxEnd3(int[] nums) {
+        int max;
+        if (nums[0] > nums[nums.length - 1]) {
+            max = nums[0];
+        } else max = nums[nums.length - 1];
 
-        return reverse;
+        for (int i=0;i<nums.length;i++){
+            nums[i]=max;
+        }
+        return nums;
     }
 }
