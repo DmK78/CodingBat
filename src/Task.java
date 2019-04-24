@@ -9,11 +9,10 @@ public class Task {
 
     }
 
-    static public boolean firstLast6(int[] nums) {
-        if (nums[0] == 6 || nums[nums.length-1] == 6) {
+    static boolean sameFirstLast(int[] nums) {
+        if (nums.length >= 1 && nums[0] == nums[nums.length - 1]) {
             return true;
         }
         return false;
-
     }
 }
