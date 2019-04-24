@@ -9,10 +9,12 @@ public class Task {
 
     }
 
-    static public int sum2(int[] nums) {
-        if (nums.length==0)return 0;
-        if (nums.length>1){
-            return nums[0]+nums[1];
-        }else return nums[0]+nums[0];
+    static public int[] middleWay(int[] a, int[] b) {
+        int arr[]=new int[2];
+        arr[0]=a[1];
+        arr[1]=b[1];
+        return arr;
+
+
     }
 }
