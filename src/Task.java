@@ -3,19 +3,39 @@ public class Task {
 
     public static void main(String[] args) {
 
-        int number[] = {1, 2, 3};
-        System.out.println(maxEnd3(number));
+        int number[] = {4, 5};
+        int number1[] = {1, 2, 3};
+        int[] arr = (make2(number, number1));
+        for (int i : arr) {
+            System.out.println(i);
+        }
 
 
     }
 
-    static public boolean unlucky1(int[] nums) {
-        if(nums.length<2)return false;
-        if(nums[0]==1 && nums[1]==3 || nums[nums.length-2]==1 && nums[nums.length-1]==3) return true;
-        if(nums.length>2) {
-            if (nums[1] == 1 && nums[2] == 3 ) return true;
-        }
-        return false;
+    static public int[] make2(int[] a, int[] b) {
+        int arr[] = new int[2];
+        boolean aIsempty = false;
+        boolean bIsempty = false;
+        if (a.length == 0) aIsempty = true;
+        if (b.length == 0) bIsempty = true;
+        int count = 0;
+        while (count < arr.length && count < a.length) {
+            if (!aIsempty) {
+                arr[count] = a[count];
+                count++;
+            }
 
+        }
+        int countB = 0;
+        while (count < arr.length && countB < b.length) {
+            if (!bIsempty) {
+                arr[count] = b[countB];
+                count++;
+                countB++;
+            }
+        }
+
+        return arr;
     }
 }
