@@ -9,16 +9,18 @@ public class Task {
 
     }
 
-    static public int maxTriple(int[] nums) {
-        int first = nums[0];
-        int middle = nums[nums.length / 2];
-        int last = nums[nums.length - 1];
-        if (first > middle && first > last) {
-            return first;
+    static public int[] frontPiece(int[] nums) {
+        if (nums.length > 1) {
+            int arr[] = {nums[0], nums[1]};
+            return arr;
         }
-        if (middle > first && middle > last) {
-            return middle;
+        if (nums.length < 1) {
+            int arr[] = new int[0];
+            return arr;
         }
-        return last;
+
+
+        int arr[] = {nums[0]};
+        return arr;
     }
 }
