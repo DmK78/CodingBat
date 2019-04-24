@@ -9,16 +9,10 @@ public class Task {
 
     }
 
-    static public int[] biggerTwo(int[] a, int[] b) {
-        if (countSumArray(a)>countSumArray(b))return a;
-        if (countSumArray(a)<countSumArray(b))return b;
-        return a;
-    }
-    static public int countSumArray ( int[] array){
-        int sum=0;
-        for (int i:array){
-            sum+=i;
-        }
-        return sum;
+    static public int[] makeMiddle(int[] nums) {
+        int[] arr = new int[2];
+        arr[0] = nums[nums.length / 2 - 1];
+        arr[1] = nums[nums.length / 2];
+        return arr;
     }
 }
