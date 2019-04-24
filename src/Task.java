@@ -4,30 +4,31 @@ public class Task {
     public static void main(String[] args) {
 
 
-        System.out.println(withoutX("x"));
+        System.out.println(withoutX2("xxHi"));
 
 
     }
 
-    static public String withoutX(String str) {
-
+    static public String withoutX2(String str) {
+        String x1="";
+        String x2="";
         if (str.length()<2){
-            if (str==""){
-                return str;
-            }else if (str.equals("x")){
+            if (str.equals("x")){
                 return "";
             }
+            return str;
         }
+        if (str.charAt(0)=='x'){
+            x1="";
+        }else x1=str.substring(0,1);
+
+        if (str.charAt(1)=='x'){
+            x2="";
+        }else x2=str.substring(1,2);
+        return x1+x2+str.substring(2,str.length());
 
 
-        if (str.substring(0, 1).contains("x")) {
-            str = str.substring(1, str.length());
 
-        }
-        if (str.substring(str.length() - 1, str.length()).contains("x")) {
-            str = str.substring(0, str.length() - 1);
-        }
-        return str;
 
 
     }
