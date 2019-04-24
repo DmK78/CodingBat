@@ -9,11 +9,16 @@ public class Task {
 
     }
 
-    static public int start1(int[] a, int[] b) {
-        int count=0;
-        if(a.length>0 && a[0]==1) count++;
-        if(b.length>0 && b[0]==1) count++;
-        return count;
-
+    static public int[] biggerTwo(int[] a, int[] b) {
+        if (countSumArray(a)>countSumArray(b))return a;
+        if (countSumArray(a)<countSumArray(b))return b;
+        return a;
+    }
+    static public int countSumArray ( int[] array){
+        int sum=0;
+        for (int i:array){
+            sum+=i;
+        }
+        return sum;
     }
 }
