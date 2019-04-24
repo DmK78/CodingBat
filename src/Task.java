@@ -3,17 +3,18 @@ public class Task {
 
     public static void main(String[] args) {
 
-        int number[] = {1, 2, 3, 4, 5, 6};
-        System.out.println(firstLast6(number));
+        int number[] = {1,2,3};
+        System.out.println(rotateLeft3(number).toString();
 
 
     }
 
-    static public int sum3(int[] nums) {
-        int result = 0;
-        for (int i : nums) {
-            result += i;
+    static public int[] rotateLeft3(int[] nums) {
+        int temp = nums[0];
+        for (int i = 0; i < nums.length - 1; i++) {
+            nums[i] = nums[i + 1];
         }
-        return result;
+        nums[nums.length - 1] = temp;
+        return nums;
     }
 }
