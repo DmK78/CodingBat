@@ -3,9 +3,9 @@ public class Task {
 
     public static void main(String[] args) {
 
-        int number[] = {4, 5};
-        int number1[] = {1, 2, 3};
-        int[] arr = (make2(number, number1));
+        int number[] = {1, 7};
+        int number1[] = new int[0];
+        int[] arr = (front11(number, number1));
         for (int i : arr) {
             System.out.println(i);
         }
@@ -13,29 +13,25 @@ public class Task {
 
     }
 
-    static public int[] make2(int[] a, int[] b) {
-        int arr[] = new int[2];
-        boolean aIsempty = false;
-        boolean bIsempty = false;
-        if (a.length == 0) aIsempty = true;
-        if (b.length == 0) bIsempty = true;
-        int count = 0;
-        while (count < arr.length && count < a.length) {
-            if (!aIsempty) {
-                arr[count] = a[count];
-                count++;
-            }
-
+    static public int[] front11(int[] a, int[] b) {
+        if (a.length == 0 && b.length > 0) {
+            int arr[] = {b[0]};
+            return arr;
         }
-        int countB = 0;
-        while (count < arr.length && countB < b.length) {
-            if (!bIsempty) {
-                arr[count] = b[countB];
-                count++;
-                countB++;
-            }
+        if (b.length == 0 && a.length > 0) {
+            int arr[] = {a[0]};
+            return arr;
+        }
+        if(a.length>0 && b.length>0) {
+            int arr[] = {a[0], b[0]};
+            return arr;
+        }
+        if (b.length == 0 && a.length == 0) {
+            int arr[] = new int[0];
+            return arr;
         }
 
-        return arr;
+return null;
+
     }
 }
