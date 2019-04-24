@@ -9,13 +9,10 @@ public class Task {
 
     }
 
-    static public boolean no23(int[] nums) {
-        for(int i:nums){
-            if (i==2 || i==3){
-                return false;
-            }
-        }
-      return true;
+    static public int[] makeLast(int[] nums) {
+        int arr[] = new int[nums.length * 2];
+        arr[arr.length-1]=nums[nums.length-1];
+        return arr;
 
 
     }
