@@ -9,12 +9,16 @@ public class Task {
 
     }
 
-    static public int[] midThree(int[] nums) {
-        int arr[] = new int[3];
-        arr[0] = nums[nums.length / 2 - 1];
-        arr[1] = nums[nums.length / 2];
-        arr[2] = nums[nums.length / 2 + 1];
-        return arr;
-
+    static public int maxTriple(int[] nums) {
+        int first = nums[0];
+        int middle = nums[nums.length / 2];
+        int last = nums[nums.length - 1];
+        if (first > middle && first > last) {
+            return first;
+        }
+        if (middle > first && middle > last) {
+            return middle;
+        }
+        return last;
     }
 }
