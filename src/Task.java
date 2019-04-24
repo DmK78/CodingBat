@@ -9,18 +9,13 @@ public class Task {
 
     }
 
-    static public int[] frontPiece(int[] nums) {
-        if (nums.length > 1) {
-            int arr[] = {nums[0], nums[1]};
-            return arr;
+    static public boolean unlucky1(int[] nums) {
+        if(nums.length<2)return false;
+        if(nums[0]==1 && nums[1]==3 || nums[nums.length-2]==1 && nums[nums.length-1]==3) return true;
+        if(nums.length>2) {
+            if (nums[1] == 1 && nums[2] == 3 ) return true;
         }
-        if (nums.length < 1) {
-            int arr[] = new int[0];
-            return arr;
-        }
+        return false;
 
-
-        int arr[] = {nums[0]};
-        return arr;
     }
 }
