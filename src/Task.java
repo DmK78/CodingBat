@@ -9,10 +9,11 @@ public class Task {
 
     }
 
-    static public boolean commonEnd(int[] a, int[] b) {
-        if (a[0] == b[0] || a[a.length - 1] == b[b.length - 1]) {
-            return true;
+    static public int sum3(int[] nums) {
+        int result = 0;
+        for (int i : nums) {
+            result += i;
         }
-        return false;
+        return result;
     }
 }
