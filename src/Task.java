@@ -10,10 +10,12 @@ public class Task {
     }
 
 
-    static public int dateFashion(int you, int date) {
-        if (date<3 || you<3) return 0;
-        if (you>7 || date>7) return 2;
-        return 1;
+    static public boolean squirrelPlay(int temp, boolean isSummer) {
+        if (isSummer) {
+            if (temp >= 60 && temp <= 100) return true;
+        } else
+            if (temp >= 60 && temp <= 90) return true;
+        return false;
 
     }
 
