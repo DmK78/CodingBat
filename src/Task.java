@@ -10,18 +10,18 @@ public class Task {
     }
 
 
-    static public int makeChocolate(int small, int big, int goal) {
+    static public boolean makeBricks(int small, int big, int goal) {
         int smallTotal = 0;
         if (small + big * 5 < goal) {
-            return -1;
+            return false;
         }
         if (goal / 5 - big > 0) {
             smallTotal = (goal / 5 - big) * 5 + goal % 5;
         } else {
             smallTotal = goal % 5;
         }
-        if (smallTotal > small) return -1;
-        return smallTotal;
+        if (smallTotal > small) return false;
+        return true;
     }
 
 }
