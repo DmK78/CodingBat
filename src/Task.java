@@ -6,17 +6,32 @@ public class Task {
     public static void main(String[] args) {
 
 
-        System.out.println(closeFar(4, 1, 3));
+        System.out.println(blackjack(19, 22));
     }
 
 
-    static public boolean closeFar(int a, int b, int c) {
-        if (Math.abs(a - b) < 2 || Math.abs(a - c) < 2) {
-            if (Math.abs(a - c) > 1 && Math.abs(b - c) > 1 || Math.abs(a - b) > 1 && Math.abs(b - c) > 1) {
-                return true;
-            }
+    static public int blackjack(int a, int b) {
 
+        boolean overA = false;
+        boolean overB = false;
+        if (a < 0 || a > 21) overA = true;
+        if (b < 0 || b > 21) overB = true;
+        if (!overA && !overB) {
+            if (a > b) {
+                return a;
+            } else return b;
         }
-        return false;
+        if (overA && !overB) {
+            return b;
+        }
+        if (!overA && overB) {
+            return a;
+        }
+
+
+        return 0;
+
+
     }
+
 }
