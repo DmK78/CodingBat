@@ -1,42 +1,22 @@
+import java.lang.*;
+
 public class Task {
 
 
     public static void main(String[] args) {
 
 
-        System.out.println(roundSum(4, 6, 5));
-        }
-
-    static public int roundSum(int a, int b, int c) {
-        return round10(a) + round10(b) + round10(c);
-
+        System.out.println(closeFar(4, 1, 3));
     }
 
-    static public int round10(int num) {
-        if (num<=10){
-            if (num>4){
-                return 10;
-            }else return 0;
+
+    static public boolean closeFar(int a, int b, int c) {
+        if (Math.abs(a - b) < 2 || Math.abs(a - c) < 2) {
+            if (Math.abs(a - c) > 1 && Math.abs(b - c) > 1 || Math.abs(a - b) > 1 && Math.abs(b - c) > 1) {
+                return true;
+            }
+
         }
-        String resultString;
-        int resultInt;
-        int decimal;
-
-        String numToStr = String.valueOf(num);
-        String lastSymbolStr=numToStr.substring(numToStr.length()-1);
-
-        int roundInt = Integer.parseInt(lastSymbolStr);
-        if(roundInt<5){
-            resultString=numToStr.substring(0,numToStr.length()-1)+"0";
-            resultInt=Integer.parseInt(resultString);
-            return resultInt;
-        }
-        decimal=Integer.parseInt(numToStr.substring(numToStr.length()-2,numToStr.length()-1));
-        decimal++;
-        String decimalStr=String.valueOf(decimal);
-
-        resultString=numToStr.substring(0,numToStr.length()-2)+decimalStr+"0";
-        resultInt=Integer.parseInt(resultString);
-        return resultInt;
+        return false;
     }
 }
