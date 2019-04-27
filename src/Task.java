@@ -6,15 +6,14 @@ public class Task {
     public static void main(String[] args) {
 
 
-        System.out.println(specialEleven(24));
+        System.out.println();
     }
 
 
-    static public boolean specialEleven(int n) {
-        if (n % 11 == 0 || n % 11 < 2) return true;
-
-
+    static public boolean more20(int n) {
+        if (n % 20 == 1 || n % 20 == 2) return true;
         return false;
+
     }
 
 
