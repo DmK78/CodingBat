@@ -6,16 +6,20 @@ public class Task {
     public static void main(String[] args) {
 
 
-        System.out.println();
+        System.out.println(in1To10(9, true));
     }
 
 
-    static public boolean love6(int a, int b) {
-        if (a == 6 || b == 6 || a + b == 6 || Math.abs(a - b) == 6) {
+    static public boolean in1To10(int n, boolean outsideMode) {
+        if (outsideMode) {
+            if (n <= 1 || n >= 10) {
+                return true;
+            }
+        } else if (n >= 1 && n <= 10) {
             return true;
         }
-        return false;
 
+        return false;
     }
 
 }
