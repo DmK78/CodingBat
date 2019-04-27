@@ -10,8 +10,12 @@ public class Task {
     }
 
 
-    static public boolean more20(int n) {
-        if (n % 20 == 1 || n % 20 == 2) return true;
+    static public boolean old35(int n) {
+        if (n % 3 == 0 && n % 5 > 0) {
+            return true;
+        } else if (n % 5 == 0 && n % 3 > 0) {
+            return true;
+        }
         return false;
 
     }
