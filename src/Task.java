@@ -10,17 +10,14 @@ public class Task {
     }
 
 
-    static public boolean inOrder(int a, int b, int c, boolean bOk) {
-        if (bOk) {
-            if (c > b) {
+    static public boolean inOrderEqual(int a, int b, int c, boolean equalOk) {
+        if (equalOk) {
+            if (a <= b && b <= c) {
                 return true;
             }
-            return false;
-        }
-        if (b > a && c > b) {
+        } else if (a < b && b < c) {
             return true;
         }
         return false;
-
     }
 }
