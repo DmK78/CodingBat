@@ -10,13 +10,16 @@ public class Task {
     }
 
 
-    static public int teenSum(int a, int b) {
-        if (a>=13 && a<=19 || b>=13 && b<=19){
-            return 19;
+    static public boolean answerCell(boolean isMorning, boolean isMom, boolean isAsleep) {
+        if (isAsleep) {
+            return false;
+        } else {
+            if (isMom) return true;
         }
-        else return a+b;
-
-
+        if (isMorning) {
+            return false;
+        }
+        return true;
 
     }
 
