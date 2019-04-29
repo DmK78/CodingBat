@@ -10,10 +10,19 @@ public class Task {
     }
 
 
-    static public boolean lessBy10(int a, int b, int c) {
-        if (Math.abs(a-b)>=10 || Math.abs(a-c)>=10 || Math.abs(b-c)>=10){
-            return true;
+    static public int withoutDoubles(int die1, int die2, boolean noDoubles) {
+        if(noDoubles){
+            if (die1==die2){
+                if(die1==6){
+                    die1=1;
+                } else die1++;
+
+            }
         }
-        return false;
+        return die1+die2;
+
+
+
+
     }
 }
