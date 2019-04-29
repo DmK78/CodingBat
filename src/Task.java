@@ -10,18 +10,17 @@ public class Task {
     }
 
 
-    static public String fizzString(String str) {
-        if (str.charAt(0) == 'f') {
-            if (str.charAt(str.length()-1) == 'b') {
-                return "FizzBuzz";
+    static public String fizzString2(int n) {
+        if (n % 3 == 0) {
+            if (n % 5 == 0) {
+                return "FizzBuzz!";
             }
-            return "Fizz";
+            return "Fizz!";
         }
-        if (str.charAt(str.length()-1) == 'b') {
-            return "Buzz";
+        if (n % 5 == 0) {
+            return "Buzz!";
         }
-
-        return str;
+        return "" + n + "!";
 
     }
 }
