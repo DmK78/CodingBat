@@ -10,8 +10,14 @@ public class Task {
     }
 
 
-    static public boolean twoAsOne(int a, int b, int c) {
-        if (Math.abs(a + b) == Math.abs(c) || Math.abs(a - b) == Math.abs(c)) {
+    static public boolean inOrder(int a, int b, int c, boolean bOk) {
+        if (bOk) {
+            if (c > b) {
+                return true;
+            }
+            return false;
+        }
+        if (b > a && c > b) {
             return true;
         }
         return false;
