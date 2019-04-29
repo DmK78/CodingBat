@@ -10,12 +10,11 @@ public class Task {
     }
 
 
-    static public boolean nearTen(int num) {
-        if ((num+2)%10==0 || (num-2)%10==0 || (num+1)%10==0 || (num-1)%10==0 || num%10 ==0){
-            return true;
+    static public int teenSum(int a, int b) {
+        if (a>=13 && a<=19 || b>=13 && b<=19){
+            return 19;
         }
-
-        return false;
+        else return a+b;
 
 
 
