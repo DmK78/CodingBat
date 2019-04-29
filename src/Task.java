@@ -10,18 +10,10 @@ public class Task {
     }
 
 
-    static public boolean lastDigit(int a, int b, int c) {
-        if (rightMost(a) == rightMost(b) || rightMost(a) == rightMost(c) || rightMost(b) == rightMost(c)) {
+    static public boolean lessBy10(int a, int b, int c) {
+        if (Math.abs(a-b)>=10 || Math.abs(a-c)>=10 || Math.abs(b-c)>=10){
             return true;
         }
         return false;
-
-    }
-
-    static int rightMost(int n) {
-        if (n >= 10) {
-            return n % 10;
-        }
-        return n;
     }
 }
