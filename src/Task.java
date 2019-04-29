@@ -10,17 +10,11 @@ public class Task {
     }
 
 
-    static public String fizzString2(int n) {
-        if (n % 3 == 0) {
-            if (n % 5 == 0) {
-                return "FizzBuzz!";
-            }
-            return "Fizz!";
+    static public boolean twoAsOne(int a, int b, int c) {
+        if (Math.abs(a + b) == Math.abs(c) || Math.abs(a - b) == Math.abs(c)) {
+            return true;
         }
-        if (n % 5 == 0) {
-            return "Buzz!";
-        }
-        return "" + n + "!";
+        return false;
 
     }
 }
