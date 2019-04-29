@@ -10,18 +10,13 @@ public class Task {
     }
 
 
-    static public boolean answerCell(boolean isMorning, boolean isMom, boolean isAsleep) {
-        if (isAsleep) {
-            return false;
-        } else {
-            if (isMom) return true;
-        }
-        if (isMorning) {
-            return false;
-        }
-        return true;
+    static public int teaParty(int tea, int candy) {
+        if (tea < 5 || candy < 5) {
+            return 0;}
+            if (tea >= candy * 2 || candy >= tea * 2) {
+                return 2;
+            }
+        return 1;
 
     }
-
-
 }
