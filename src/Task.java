@@ -10,13 +10,18 @@ public class Task {
     }
 
 
-    static public int teaParty(int tea, int candy) {
-        if (tea < 5 || candy < 5) {
-            return 0;}
-            if (tea >= candy * 2 || candy >= tea * 2) {
-                return 2;
+    static public String fizzString(String str) {
+        if (str.charAt(0) == 'f') {
+            if (str.charAt(str.length()-1) == 'b') {
+                return "FizzBuzz";
             }
-        return 1;
+            return "Fizz";
+        }
+        if (str.charAt(str.length()-1) == 'b') {
+            return "Buzz";
+        }
+
+        return str;
 
     }
 }
