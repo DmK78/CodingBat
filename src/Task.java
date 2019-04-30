@@ -10,11 +10,12 @@ public class Task {
     }
 
 
-    static public int sumLimit(int a, int b) {
-        if (String.valueOf(a + b).length() > String.valueOf(a).length()) {
-            return a;
+    static public String doubleChar(String str) {
+        String result="";
+        for(int i=0;i<str.length();i++){
+            result +=str.substring(i,i+1)+str.substring(i,i+1);
         }
-        return a + b;
+        return result;
 
 
     }
