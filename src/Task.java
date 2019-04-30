@@ -6,19 +6,26 @@ public class Task {
     public static void main(String[] args) {
 
 
-        System.out.println(bobThere("b9b"));
+        System.out.println(xyBalance("y"));
     }
 
 
-    static public boolean bobThere(String str) {
-        for (int i = 0; i <= str.length() - 3; i++) {
-
-
-            if (str.charAt(i) == 'b' && str.charAt(i + 2) == 'b') {
-                return true;
+    static public boolean xyBalance(String str) {
+        int posX = -1;
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == 'x') {
+                posX = i;
             }
         }
+        if (posX != -1) {
+            for (int i = posX + 1; i < str.length(); i++) {
+                if (str.charAt(i) == 'y') {
+                    return true;
+                }
+            }
+        } else return true;
         return false;
+
     }
 
 
