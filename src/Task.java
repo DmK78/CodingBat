@@ -10,15 +10,18 @@ public class Task {
     }
 
 
-    static public int redTicket(int a, int b, int c) {
-        if (a == 2 && b == 2 && c == 2) {
+    static public int greenTicket(int a, int b, int c) {
+
+        if (a == b && a == c) {
+            return 20;
+        }
+        if (a == b || a == c || b == c) {
             return 10;
         }
-        if (a == b && a == c) {
-            return 5;
-        }
+
+
         if (a != b && a != c) {
-            return 1;
+            return 0;
         }
 
         return 0;
