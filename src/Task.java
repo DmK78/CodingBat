@@ -6,24 +6,22 @@ public class Task {
     public static void main(String[] args) {
 
 
-        System.out.println(countHi("hi man che kavo hi"));
+        System.out.println(xyzThere("abc.xyz"));
     }
 
 
-    static public boolean endOther(String a, String b) {
-        a=a.toLowerCase();
-        b=b.toLowerCase();
-if (a.length()>b.length()){
-    if (a.substring(a.length()-b.length()).equals(b)){
-        return true;
-    }
-} else {
-    if (b.substring(b.length()-a.length()).equals(a)){
-        return true;
-    }
-}
-return false;
+    static public boolean xyzThere(String str) {
+        boolean isTrue = false;
+        String looking = "xyz";
+        for (int i = 0; i < (str.length() - looking.length()+1); i++) {
+            if (str.substring(i, i + looking.length()).equals(looking)) {
+                if (i > 0 && str.substring(i - 1, i).equals(".")) {
+                    isTrue=false;
+                } else isTrue=true;
 
+            }
+        }
+        return isTrue;
     }
 
 
