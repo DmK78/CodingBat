@@ -10,20 +10,18 @@ public class Task {
     }
 
 
-    static public int maxMod5(int a, int b) {
-        if (a == b) {
-            return 0;
+    static public int redTicket(int a, int b, int c) {
+        if (a == 2 && b == 2 && c == 2) {
+            return 10;
         }
-        if (a % 5 == b % 5 ) {
-            if (a > b) {
-                return b;
-            } else return a;
-
+        if (a == b && a == c) {
+            return 5;
         }
-        if (a > b) {
-            return a;
-        } else return b;
+        if (a != b && a != c) {
+            return 1;
+        }
 
+        return 0;
 
     }
 }
