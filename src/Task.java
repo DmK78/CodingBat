@@ -6,25 +6,15 @@ public class Task {
     public static void main(String[] args) {
 
 
-        System.out.println(xyBalance("y"));
+        System.out.println(mixString("Hi", "There"));
     }
 
 
-    static public boolean xyBalance(String str) {
-        int posX = -1;
-        for (int i = 0; i < str.length(); i++) {
-            if (str.charAt(i) == 'x') {
-                posX = i;
-            }
-        }
-        if (posX != -1) {
-            for (int i = posX + 1; i < str.length(); i++) {
-                if (str.charAt(i) == 'y') {
-                    return true;
-                }
-            }
-        } else return true;
-        return false;
+    static public String mixString(String a, String b) {
+        if (a.length() == 0) return b;
+        if (b.length() == 0) return a;
+        return a.substring(0, 1) + b.substring(0, 1) + mixString(a.substring(1, a.length()), b.substring(1, b.length()));
+
 
     }
 
