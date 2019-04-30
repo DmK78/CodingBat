@@ -10,18 +10,19 @@ public class Task {
     }
 
 
-    static public int withoutDoubles(int die1, int die2, boolean noDoubles) {
-        if(noDoubles){
-            if (die1==die2){
-                if(die1==6){
-                    die1=1;
-                } else die1++;
-
-            }
+    static public int maxMod5(int a, int b) {
+        if (a == b) {
+            return 0;
         }
-        return die1+die2;
+        if (a % 5 == b % 5 ) {
+            if (a > b) {
+                return b;
+            } else return a;
 
-
+        }
+        if (a > b) {
+            return a;
+        } else return b;
 
 
     }
