@@ -10,15 +10,11 @@ public class Task {
     }
 
 
-    static public boolean shareDigit(int a, int b) {
-        if (a < 10 && b < 10 && a == b) {
-            return true;
+    static public int sumLimit(int a, int b) {
+        if (String.valueOf(a + b).length() > String.valueOf(a).length()) {
+            return a;
         }
-        if (a / 10 == b / 10 || a / 10 == b % 10 || a % 10 == b / 10 || a % 10 == b % 10) {
-            return true;
-        }
-        return false;
-
+        return a + b;
 
 
     }
