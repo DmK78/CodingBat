@@ -6,14 +6,26 @@ public class Task {
     public static void main(String[] args) {
 
 
-        System.out.println(mixString("Hi", "There"));
+        System.out.println(repeatEnd("1234", 2));
     }
 
 
-    static public String mixString(String a, String b) {
-        if (a.length() == 0) return b;
-        if (b.length() == 0) return a;
-        return a.substring(0, 1) + b.substring(0, 1) + mixString(a.substring(1, a.length()), b.substring(1, b.length()));
+    static public String repeatEnd(String str, int n) {
+        if (str.length() == 0 || n < 1) {
+            return "";
+        }
+        if (str.charAt(0) == '!') {
+            str = str.substring(1, str.length());
+        } else {
+            str = str.substring(str.length() - n, str.length());
+        }
+        int count = n;
+        if (count == 0) {
+            return "";
+        }
+
+        count--;
+        return str + repeatEnd("!" + str, count);
 
 
     }
