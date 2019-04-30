@@ -6,26 +6,16 @@ public class Task {
     public static void main(String[] args) {
 
 
-        System.out.println(repeatEnd("1234", 2));
+        System.out.println(repeatFront("Ice Cream", 2));
     }
 
 
-    static public String repeatEnd(String str, int n) {
-        if (str.length() == 0 || n < 1) {
-            return "";
-        }
-        if (str.charAt(0) == '!') {
-            str = str.substring(1, str.length());
-        } else {
-            str = str.substring(str.length() - n, str.length());
-        }
-        int count = n;
-        if (count == 0) {
-            return "";
-        }
+    static public String repeatFront(String str, int n) {
 
-        count--;
-        return str + repeatEnd("!" + str, count);
+        if (n==0){
+            return "";
+        }
+        return str.substring(0,n)+repeatFront(str,n-1);
 
 
     }
