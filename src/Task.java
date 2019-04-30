@@ -6,16 +6,16 @@ public class Task {
     public static void main(String[] args) {
 
 
-        System.out.println(repeatFront("Ice Cream", 2));
+        System.out.println(repeatSeparator("Word", "X", 3));
     }
 
 
-    static public String repeatFront(String str, int n) {
+    static public String repeatSeparator(String word, String sep, int count) {
+        if (count==0) return "";
+        if (count == 1) {
+            return word;}
+            return word + sep + repeatSeparator(word, sep, count - 1);
 
-        if (n==0){
-            return "";
-        }
-        return str.substring(0,n)+repeatFront(str,n-1);
 
 
     }
