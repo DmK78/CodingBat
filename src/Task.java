@@ -23,6 +23,6 @@ public class Task {
             return 0;
         }
         return 1 + countAnyone(str.substring(0, str.indexOf(find)) + str.substring(str.indexOf(find) + find.length(), str.length()), find);
-
+//
     }
 }
