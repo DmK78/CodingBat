@@ -10,14 +10,19 @@ public class Task {
     }
 
 
-    static public int countCode(String str) {
-        int count=0;
-        for (int i=0;i<str.length()-3;i++){
-            if (str.charAt(i)=='c' && str.charAt(i+1)=='o' && str.charAt(i+3)=='e'){
-                count++;
-            }
-        }
-        return count;
+    static public boolean endOther(String a, String b) {
+        a=a.toLowerCase();
+        b=b.toLowerCase();
+if (a.length()>b.length()){
+    if (a.substring(a.length()-b.length()).equals(b)){
+        return true;
+    }
+} else {
+    if (b.substring(b.length()-a.length()).equals(a)){
+        return true;
+    }
+}
+return false;
 
     }
 
