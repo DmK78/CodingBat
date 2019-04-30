@@ -6,16 +6,15 @@ public class Task {
     public static void main(String[] args) {
 
 
-        System.out.println();
+        System.out.println(countHi("hi man che kavo hi"));
     }
 
 
-    static public String doubleChar(String str) {
-        String result="";
-        for(int i=0;i<str.length();i++){
-            result +=str.substring(i,i+1)+str.substring(i,i+1);
+    static public int countHi(String str) {
+        if (str.indexOf("hi")==-1){
+            return 0;
         }
-        return result;
+      return 1+countHi(str.substring(0,str.indexOf("hi"))+str.substring(str.indexOf("hi")+2,str.length()));
 
 
     }
