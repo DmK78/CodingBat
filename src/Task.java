@@ -6,22 +6,19 @@ public class Task {
     public static void main(String[] args) {
 
 
-        System.out.println(xyzThere("abc.xyz"));
+        System.out.println(bobThere("b9b"));
     }
 
 
-    static public boolean xyzThere(String str) {
-        boolean isTrue = false;
-        String looking = "xyz";
-        for (int i = 0; i < (str.length() - looking.length()+1); i++) {
-            if (str.substring(i, i + looking.length()).equals(looking)) {
-                if (i > 0 && str.substring(i - 1, i).equals(".")) {
-                    isTrue=false;
-                } else isTrue=true;
+    static public boolean bobThere(String str) {
+        for (int i = 0; i <= str.length() - 3; i++) {
 
+
+            if (str.charAt(i) == 'b' && str.charAt(i + 2) == 'b') {
+                return true;
             }
         }
-        return isTrue;
+        return false;
     }
 
 
