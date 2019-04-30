@@ -10,16 +10,16 @@ public class Task {
     }
 
 
-    static public int greenTicket(int a, int b, int c) {
-
-        if (a + b == 10 || a + c == 10 || b + c == 10) {
-            return 10;
+    static public boolean shareDigit(int a, int b) {
+        if (a < 10 && b < 10 && a == b) {
+            return true;
         }
-        if ((a + b) - (a + c) >= 10 || (a + b) - (b + c) >= 10) {
-            return 5;
+        if (a / 10 == b / 10 || a / 10 == b % 10 || a % 10 == b / 10 || a % 10 == b % 10) {
+            return true;
         }
+        return false;
 
-        return 0;
+
 
     }
 }
