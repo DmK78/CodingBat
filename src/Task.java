@@ -10,19 +10,16 @@ public class Task {
     }
 
 
-    static public boolean catDog(String str) {
-        if (countAnyone(str, "cat") == countAnyone(str, "dog")) {
-            return true;
+    static public int countCode(String str) {
+        int count=0;
+        for (int i=0;i<str.length()-3;i++){
+            if (str.charAt(i)=='c' && str.charAt(i+1)=='o' && str.charAt(i+3)=='e'){
+                count++;
+            }
         }
-        return false;
+        return count;
 
     }
 
-    static public int countAnyone(String str, String find) {
-        if (str.indexOf(find) == -1) {
-            return 0;
-        }
-        return 1 + countAnyone(str.substring(0, str.indexOf(find)) + str.substring(str.indexOf(find) + find.length(), str.length()), find);
-//
-    }
+
 }
